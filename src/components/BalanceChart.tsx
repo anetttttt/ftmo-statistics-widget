@@ -11,7 +11,7 @@ import clsx from 'clsx';
 import { useState } from 'react';
 import { Button } from './designSystem/Button';
 import { ArrowRight } from './designSystem/Icons/ArrowRight';
-import { Close } from './designSystem/Icons/Close.tsx';
+import { Close } from './designSystem/Icons/Close';
 import type { BalanceCurveData } from '../types/account';
 
 type BalanceChartProps = {
