@@ -11,7 +11,7 @@ type BadgeProps = {
 const badgeVariantCls: Record<BadgeVariant, string> = {
   primary: 'bg-primary-10 text-primary border-primary',
   success: 'bg-success text-white border-success',
-  // And other variants
+  // ...and other variants
 };
 
 export const Badge: React.FC<BadgeProps> = ({

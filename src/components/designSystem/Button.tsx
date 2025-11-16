@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 
-type ButtonVariant = 'outlined';
+type ButtonVariant = 'outlined' | 'icon';
 
 type ButtonProps = {
   variant: ButtonVariant;
@@ -8,16 +8,17 @@ type ButtonProps = {
   href?: string;
   target?: string;
   className?: string;
+  onClick?: () => void;
 };
 
 const buttonVariantCls: Record<ButtonVariant, string> = {
   outlined:
-    'bg-transparent border-border-tertiary hover:bg-[#9b9c9d26] transition-all ' +
+    'border rounded-[4px] flex items-center justify-center text-sm text-center cursor-pointer ' +
+    'py-2 px-10 bg-transparent border-border-tertiary hover:bg-[#9b9c9d26] transition-all ' +
     'dark:border-dark-border-tertiary',
-  // And other variants
+  icon: '',
+  // ...and other variants
 };
-const buttonCls =
-  'border rounded-[4px] py-2 px-10 flex items-center justify-center text-sm text-center cursor-pointer';
 
 export const Button: React.FC<ButtonProps> = ({
   variant,
@@ -25,19 +26,21 @@ export const Button: React.FC<ButtonProps> = ({
   href,
   target,
   className,
+  onClick,
 }) => {
   return href ? (
     <a
       href={href}
       target={target}
-      className={clsx(buttonVariantCls[variant], buttonCls, className)}
+      className={clsx(buttonVariantCls[variant], className)}
     >
       {children}
     </a>
   ) : (
     <button
       type="button"
-      className={clsx(buttonVariantCls[variant], buttonCls, className)}
+      onClick={onClick}
+      className={clsx(buttonVariantCls[variant], className)}
     >
       {children}
     </button>

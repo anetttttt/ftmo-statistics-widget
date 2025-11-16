@@ -1,5 +1,5 @@
 import * as Tooltip from '@radix-ui/react-tooltip';
-import { Info } from './Icons/Info';
+import { Info } from '../designSystem/Icons/Info';
 import clsx from 'clsx';
 
 export const InfoTootlip: React.FC<React.PropsWithChildren> = ({ children }) => {

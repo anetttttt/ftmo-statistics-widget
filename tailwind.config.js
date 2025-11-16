@@ -7,6 +7,7 @@ export default {
       fontFamily: {
         sans: ['Poppins', 'ui-sans-serif', 'system-ui', 'sans-serif'],
       },
+      // Figma colors naming
       colors: {
         content: {
           primary: '#262729',

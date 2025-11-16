@@ -8,8 +8,8 @@
 * Vite
 * Tailwind CSS v3
 * ESLint 9
-* Mock API (local simulation using async delay)
-* Custom UI components (Badge, Switch, CollapsibleSection, Tooltip, Icons…)
+* Mock API
+* Custom UI komponenty (Badge, Switch, CollapsibleSection, Tooltip, Icons…)
 
 ---
 

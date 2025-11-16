@@ -1,4 +1,4 @@
-import type { Icons } from '../../types/icons';
+import type { Icons } from '../../../types/icons';
 
 export const Info = ({ className, size = '16px' }: Icons) => (
   <span className={className}>

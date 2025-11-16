@@ -1,31 +1,31 @@
 import clsx from 'clsx';
-import type { AccountData } from '../types/account';
 import { formatCurrency } from '../utils/format';
-import { InfoTootlip } from '../components/InfoTootlip';
+import { InfoTootlip } from './designSystem/InfoTootlip';
+import type { AccountData } from '../types/account';
 
 type AccountMetricsProps = {
-  account: AccountData;
+  data: AccountData;
 };
 
-export const AccountMetrics: React.FC<AccountMetricsProps> = ({ account }) => {
-  const unrealizedPnL = account.equity - account.balance;
+export const AccountMetrics: React.FC<AccountMetricsProps> = ({ data }) => {
+  const unrealizedPnL = data.equity - data.balance;
 
   const items = [
     {
       label: "Today's profit",
-      description: "The total profit or loss generated so far today, based on all closed and open positions.",
-      value: account.profit,
+      description: 'The total profit or loss generated so far today, based on all closed and open positions.',
+      value: data.profit,
       className: 'order-3 lg:order-1 col-span-2 lg:col-span-1',
     },
     {
       label: 'Equity',
-      description: "The real-time value of your account: balance plus the current profit or loss from open trades.",
-      value: account.equity,
+      description: 'The real-time value of your account: balance plus the current profit or loss from open trades.',
+      value: data.equity,
       className: 'order-1 lg:order-2',
     },
     {
       label: 'Unrealized PnL',
-      description: "The current profit or loss from open positions that haven’t been closed yet.",
+      description: 'The current profit or loss from open positions that haven’t been closed yet.',
       value: unrealizedPnL,
       className: 'order-2 lg:order-3',
     },

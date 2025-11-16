@@ -1,7 +1,7 @@
 import * as React from 'react';
 import clsx from 'clsx';
-import { Visible } from './Icons/Visible';
-import { Hidden } from './Icons/Hidden';
+import { Visible } from '../designSystem/Icons/Visible';
+import { Hidden } from '../designSystem/Icons/Hidden';
 
 type SwitchProps = {
   checked: boolean;

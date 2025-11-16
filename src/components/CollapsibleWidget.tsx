@@ -1,17 +1,16 @@
 import { useEffect, useRef, useState } from 'react';
 import clsx from 'clsx';
-import { Badge } from '../components/Badge';
-import { Switch } from '../components/Switch';
-import { AccountMetrics } from '../components/AccountMetrics';
 import { formatCurrency } from '../utils/format';
-import { Key } from '../components/Icons/Key';
-import { Chart } from '../components/Icons/Chart';
-import { Live } from '../components/Icons/Live';
-import { Button } from '../components/Button';
-import { ArrowRight } from '../components/Icons/ArrowRight';
+import { Badge } from './designSystem/Badge';
+import { Switch } from './designSystem/Switch';
+import { AccountMetrics } from '../components/AccountMetrics';
+import { BalanceChart } from '../components/BalanceChart';
+import { Key } from './designSystem/Icons/Key';
+import { Chart } from './designSystem/Icons/Chart';
+import { Live } from './designSystem/Icons/Live';
+import { Analysis } from './designSystem/Icons/Analysis';
+import { Mentor } from './designSystem/Icons/Mentor';
 import type { AccountApiResponse } from '../types/account';
-import { Analysis } from '../components/Icons/Analysis';
-import { Mentor } from '../components/Icons/Mentor';
 
 type CollapsibleWidgetProps = {
   data: AccountApiResponse;
@@ -150,16 +149,10 @@ export const CollapsibleWidget: React.FC<CollapsibleWidgetProps> = ({
                 </div>
               </div>
 
-              <Button
-                variant="outlined"
-                className="gap-3"
-              >
-                Detail
-                <ArrowRight />
-              </Button>
+              <BalanceChart data={data.balanceCurve} />
             </div>
 
-            <AccountMetrics account={data.account} />
+            <AccountMetrics data={data.account} />
           </div>
         </div>
       </div>

@@ -15,6 +15,13 @@ export interface AccountData {
   lifetimeMaxDailyLoss: TimestampValue;
 }
 
+export interface BalanceCurveData {
+  balance: number[];
+  time: string[];
+  ticket: string[];
+}
+
 export interface AccountApiResponse {
   account: AccountData;
+  balanceCurve: BalanceCurveData;
 }
