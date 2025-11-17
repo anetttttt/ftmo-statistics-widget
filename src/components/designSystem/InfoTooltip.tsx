@@ -1,10 +1,10 @@
+import clsx from 'clsx';
 import * as Tooltip from '@radix-ui/react-tooltip';
 import { Info } from '../designSystem/Icons/Info';
-import clsx from 'clsx';
 
-export const InfoTootlip: React.FC<React.PropsWithChildren> = ({ children }) => {
+export const InfoTooltip: React.FC<React.PropsWithChildren> = ({ children }) => {
   return (
-    <Tooltip.Provider>
+    <Tooltip.Provider delayDuration={0}>
       <Tooltip.Root>
         <Tooltip.Trigger className="cursor-help">
           <Info />

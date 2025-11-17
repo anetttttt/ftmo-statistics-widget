@@ -9,3 +9,7 @@
     @apply font-sans text-content-primary dark:text-dark-content-primary font-medium;
   }
 }
+
+:root {
+  --tw-success: theme(colors.success.DEFAULT);
+}

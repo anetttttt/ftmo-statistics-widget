@@ -85,6 +85,7 @@ export const BalanceChart: React.FC<BalanceChartProps> = ({ data }) => {
             </h2>
 
             <div className="w-full lg:w-[500px] h-[300px]">
+              {/* ----- Chart ----- */}
               <ResponsiveContainer
                 width="100%"
                 height="100%"
@@ -97,7 +98,7 @@ export const BalanceChart: React.FC<BalanceChartProps> = ({ data }) => {
                   <Line
                     type="monotone"
                     dataKey="balance"
-                    stroke="#03C7B4"
+                    stroke="var(--tw-success)"
                     strokeWidth={5}
                     dot={false}
                   />

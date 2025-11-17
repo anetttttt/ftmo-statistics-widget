@@ -102,7 +102,7 @@ export const CollapsibleWidget: React.FC<CollapsibleWidgetProps> = ({
               {summaryDataItems.map((item, index) => (
                 <li
                   key={index}
-                  className="flex gap-2"
+                  className="flex flex-wrap gap-2"
                 >
                   <span className="text-content-tertiary dark:text-dark-content-tertiary">
                     {item.label}:

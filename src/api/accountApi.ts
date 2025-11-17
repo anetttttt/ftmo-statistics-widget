@@ -44,6 +44,7 @@ export async function fetchAccountData(): Promise<AccountApiResponse> {
   };
 }
 
+// API request simulation from mocki.io
 /*
 export async function fetchAccountData(): Promise<AccountApiResponse> {
   const res = await fetch("https://mocki.io/v1/e2611fbf-4a52-4055-a5c8-3360940479ec");

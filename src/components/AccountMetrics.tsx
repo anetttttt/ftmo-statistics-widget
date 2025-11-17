@@ -1,6 +1,6 @@
 import clsx from 'clsx';
 import { formatCurrency } from '../utils/format';
-import { InfoTootlip } from './designSystem/InfoTootlip';
+import { InfoTooltip } from './designSystem/InfoTooltip';
 import type { AccountData } from '../types/account';
 
 type AccountMetricsProps = {
@@ -46,7 +46,7 @@ export const AccountMetrics: React.FC<AccountMetricsProps> = ({ data }) => {
               'dark:text-dark-content-secondary',
             )}>
               {item.label}
-              <InfoTootlip>{item.description}</InfoTootlip>
+              <InfoTooltip>{item.description}</InfoTooltip>
             </p>
             <div
               className={clsx(
